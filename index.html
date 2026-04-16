@@ -359,8 +359,7 @@ nav {
 }
 
 .phone-card-pred {
-  display: flex;
-  gap: 6px;
+  display: flex; gap: 6px;
 }
 
 .phone-pred-item {
@@ -745,11 +744,12 @@ footer {
 }
 .phone-total-val { font-size: 17px; font-weight: 700; color: #22c55e; }
 .phone-total-val.orta-val { color: #eab308; }
+/* ARTIK BUTONLAR AKTİF */
 .btn-disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-  filter: grayscale(20%);
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
+  filter: none;
 }
 </style>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "80cf754aa0654db9aacdfbe982b886ca"}'></script></head>
@@ -757,10 +757,10 @@ footer {
 
 <nav>
   <div class="nav-logo">
-    <img src="data:image/png;base64,..." alt="Logo">
-    <span>KUPON<b>AI</b></span>
+    <img src="data:image/png;base64,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" alt="KuponAI Logo">
+    <span>Kupon<b>AI</b></span>
   </div>
-  <a href="https://play.google.com/store/apps/details?id=com.kuponai.app" target="_blank" rel="noopener noreferrer" class="nav-btn">HEMEN KATIL</a>
+  <a href="https://play.google.com/store/apps/details?id=com.kuponai.app" class="nav-btn">YÜKLE</a>
 </nav>
 
 <section class="hero">
@@ -768,27 +768,21 @@ footer {
   <div class="grid-bg"></div>
   <div class="hero-content">
     <div class="hero-left">
-      <div class="hero-badge">YAPAY ZEKA ANALİZİ AKTİF</div>
+      <div class="hero-badge">YAPAY ZEKA DESTEKLİ TAHMİNLER</div>
       <h1 class="hero-title">
-        KAZANMANIN <br>
-        <span class="gold">AKILLI</span> <span class="outline">YOLU</span>
+        <span class="outline">KAZANMAYA</span><br>
+        <span class="gold">BAŞLA</span>
       </h1>
       <p class="hero-desc">
-        KuponAI, gelişmiş algoritmalarıyla binlerce veriyi saniyeler içinde analiz eder, <strong>günlük en yüksek başarı oranlı</strong> tahminleri cebinize getirir.
+        Yapay zeka algoritmalarımız her gün binlerce maçı analiz eder ve <strong>en yüksek başarı şansına sahip</strong> kuponları senin için hazırlar.
       </p>
-      
       <div class="hero-btns">
-        <a href="#" class="btn-primary">
-          <span>İNDİR (APK)</span>
+        <a href="https://play.google.com/store/apps/details?id=com.kuponai.app" class="btn-primary">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMzI1LjggMjgxbC02Mi02MWwtNjEgNjJsNjAgNjB6Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTI2LjUgMjUuNXY0NjFsMjExLTIxMWwtMzAtMzB6Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTQ4NS41IDI0OS41TDQwOS43IDIwNmwtNjQuNSA2NC41bDY0LjUgNjQuNWw3NS44LTQzLjVjOC42LTQuOSAxMy45LTE0LjEgMTMuOS0yNC4xczUuMy0xOS4yLTEzLjktMjQuMXoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMzMwLjggMTYwLjFMMjU0LjcgMjI2bDYxLjEgNjEuMUw0NDkuOCAzODFjMTUuNCA4LjggMzUuNyAxLjkgNDQuNS0xMy41YzUuNC05LjQgNS40LTIwLjggMC0zMC4ybC0xNjQtMjc3LjJ6Ii8+PC9zdmc+" width="24" alt="Play Store">
+          Google Play'den İndir
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.kuponai.app" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-          <div style="text-align: left;">
-            <div style="font-size: 10px; opacity: 0.7; font-weight: 400; line-height: 1;">GOOGLE PLAY</div>
-            <div style="font-size: 16px; font-weight: 700;">YÜKLE</div>
-          </div>
-        </a>
+        <a href="#features" class="btn-secondary">Özellikleri Keşfet</a>
       </div>
-
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-num">%85+</span>
@@ -796,26 +790,149 @@ footer {
         </div>
         <div class="stat">
           <span class="stat-num">50K+</span>
-          <span class="stat-label">KULLANICI</span>
+          <span class="stat-label">AKTİF KULLANICI</span>
         </div>
       </div>
     </div>
-    
+
+    <div class="hero-right">
+      <div class="phone-mockup">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-topbar">
+            <div class="phone-header-logo">
+              <span>Kupon<b>AI</b></span>
+            </div>
+          </div>
+          
+          <div class="phone-date-line">Bugünkü Özel Tahminler</div>
+          <div class="phone-ai-chip">🤖 AI Analizi Tamamlandı</div>
+
+          <div class="phone-coupon-card dusuk">
+            <div class="phone-coupon-header">
+              <div class="phone-coupon-left">
+                <span class="phone-coupon-icon">🟢</span>
+                <div>
+                  <div class="phone-coupon-title">Günün Bankosu</div>
+                  <div class="phone-coupon-sub">Yüksek Güven</div>
+                </div>
+              </div>
+              <div class="phone-coupon-count">2 Maç</div>
+            </div>
+            
+            <div class="phone-match">
+              <div class="phone-match-league">İngiltere - Premier Lig</div>
+              <div class="phone-match-row">
+                <div class="phone-match-teams">Arsenal - Liverpool</div>
+                <div class="phone-tag green">MS 1</div>
+              </div>
+            </div>
+
+            <div class="phone-match">
+              <div class="phone-match-league">İspanya - La Liga</div>
+              <div class="phone-match-row">
+                <div class="phone-match-teams">Real Madrid - Barça</div>
+                <div class="phone-tag green">2.5 ÜST</div>
+              </div>
+            </div>
+
+            <div class="phone-total">
+              <span>Toplam Oran</span>
+              <span class="phone-total-val">3.45</span>
+            </div>
+          </div>
+
+          <div class="phone-coupon-card orta">
+            <div class="phone-coupon-header">
+              <div class="phone-coupon-left">
+                <span class="phone-coupon-icon">🔥</span>
+                <div>
+                  <div class="phone-coupon-title orta-title">Sürpriz Kupon</div>
+                  <div class="phone-coupon-sub">Yüksek Oran</div>
+                </div>
+              </div>
+              <div class="phone-coupon-count orta-count">3 Maç</div>
+            </div>
+            
+            <div class="phone-match">
+              <div class="phone-match-league">Almanya - Bundesliga</div>
+              <div class="phone-match-row">
+                <div class="phone-match-teams">Bayern - Dortmund</div>
+                <div class="phone-tag gold">İY/MS</div>
+              </div>
+            </div>
+
+            <div class="phone-total">
+              <span>Toplam Oran</span>
+              <span class="phone-total-val orta-val">12.80</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="glow-ring"></div>
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="section-label">NEDEN BİZ?</div>
+  <h2 class="section-title">TEKNOLOJİ İLE <span class="gold">KAZAN</span></h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <h3 class="feature-title">Gelişmiş AI</h3>
+      <p class="feature-desc">Milyonlarca veriyi saniyeler içinde analiz eden derin öğrenme algoritmaları.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3 class="feature-title">Detaylı İstatistik</h3>
+      <p class="feature-desc">Sadece tahmin değil, takımların form durumu ve sakatlık raporları.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔔</div>
+      <h3 class="feature-title">Anlık Bildirim</h3>
+      <p class="feature-desc">Yeni kuponlar eklendiğinde veya maçlar sonuçlandığında anında haberin olsun.</p>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="how-inner">
+    <div class="section-label">SİSTEM NASIL ÇALIŞIR?</div>
+    <h2 class="section-title">3 ADIMDA <span class="gold">BAŞLA</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-icon">📱</div>
+        <h3 class="step-title">Uygulamayı İndir</h3>
+        <p class="step-desc">KuponAI uygulamasını Play Store'dan ücretsiz olarak telefonuna yükle.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-icon">🔍</div>
+        <h3 class="step-title">Analizleri İncele</h3>
+        <p class="step-desc">Yapay zekanın hazırladığı günlük banko ve sürpriz kuponlara göz at.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-icon">🏆</div>
+        <h3 class="step-title">Kazanmaya Başla</h3>
+        <p class="step-desc">En yüksek güven oranına sahip maçları seç ve kazanmanın keyfini çıkar.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="cta">
   <div class="cta-bg"></div>
   <div class="cta-inner">
-    <h2 class="cta-title">KAZANMAYA <span class="gold">BUGÜN</span> BAŞLAYIN</h2>
-    <p class="cta-desc">Yapay zeka destekli analizlerle bahis stratejinizi bir üst seviyeye taşıyın.</p>
+    <h2 class="cta-title">HAZIR <span class="gold">MISIN?</span></h2>
+    <p class="cta-desc">Hemen ücretsiz indir, yapay zeka analizli kuponlarla kazanmaya bugün başla.</p>
     <div class="cta-btns">
-      <a href="#" class="btn-primary">İNDİR (APK)</a>
-      <a href="https://play.google.com/store/apps/details?id=com.kuponai.app" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-        <div style="text-align: left;">
-          <div style="font-size: 10px; opacity: 0.7; font-weight: 400; line-height: 1;">GOOGLE PLAY</div>
-          <div style="font-size: 16px; font-weight: 700;">YÜKLE</div>
-        </div>
+      <a href="https://play.google.com/store/apps/details?id=com.kuponai.app" class="btn-primary" style="padding: 18px 48px; font-size: 18px;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMzI1LjggMjgxbC02Mi02MWwtNjEgNjJsNjAgNjB6Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTI2LjUgMjUuNXY0NjFsMjExLTIxMWwtMzAtMzB6Ii8+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTQ4NS41IDI0OS41TDQwOS43IDIwNmwtNjQuNSA2NC41bDY0LjUgNjQuNWw3NS44LTQzLjVjOC42LTQuOSAxMy45LTE0LjEgMTMuOS0yNC4xczUuMy0xOS4yLTEzLjktMjQuMXoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMzMwLjggMTYwLjFMMjU0LjcgMjI2bDYxLjEgNjEuMUw0NDkuOCAzODFjMTUuNCA4LjggMzUuNyAxLjkgNDQuNS0xMy41YzUuNC05LjQgNS40LTIwLjggMC0zMC4ybC0xNjQtMjc3LjJ6Ii8+PC9zdmc+" width="28" alt="Play Store">
+        Hemen Ücretsiz İndir
       </a>
     </div>
   </div>
@@ -823,9 +940,15 @@ footer {
 
 <footer>
   <div class="footer-logo">
-    <span>KUPON<b>AI</b></span>
+    <img src="data:image/png;base64,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" alt="KuponAI Logo">
+    <span>Kupon<b>AI</b></span>
   </div>
-  <div class="footer-copy">© 2024 KuponAI. Tüm hakları saklıdır.</div>
+  <div class="footer-links">
+    <a href="#">Kullanım Şartları</a>
+    <a href="#">Gizlilik Politikası</a>
+    <a href="#">İletişim</a>
+  </div>
+  <div class="footer-copy">&copy; 2024 KuponAI. Tüm hakları saklıdır.</div>
 </footer>
 
 </body>
